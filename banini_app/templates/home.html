@@ -1,0 +1,37 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>📊 Resumo Financeiro</h2>
+<ul>
+  <li><strong>Total Pago no Mês:</strong> R$ {{ total_pago_mes }}</li>
+  <li><strong>Total Vencido:</strong> R$ {{ total_vencido }}</li>
+  <li><strong>Total a Vencer (próximos 3 dias):</strong> R$ {{ total_a_vencer }}</li>
+</ul>
+
+<h3 style="color: red;">⚠️ Pagamentos Vencidos</h3>
+<ul>
+  {% for p in vencidos %}
+    <li style="color: red;">{{ p.fornecedor.nome }} - {{ p.data_vencimento }} - R$ {{ p.valor }}</li>
+  {% empty %}
+    <li>Nenhum pagamento vencido.</li>
+  {% endfor %}
+</ul>
+
+<h3 style="color: orange;">⏳ Próximos a Vencer (até 3 dias)</h3>
+<ul>
+  {% for p in proximos %}
+    <li style="color: orange;">{{ p.fornecedor.nome }} - {{ p.data_vencimento }} - R$ {{ p.valor }}</li>
+  {% empty %}
+    <li>Nenhum pagamento próximo do vencimento.</li>
+  {% endfor %}
+</ul>
+
+<h3 style="color: green;">📅 Pagamentos Futuros</h3>
+<ul>
+  {% for p in futuros %}
+    <li style="color: green;">{{ p.fornecedor.nome }} - {{ p.data_vencimento }} - R$ {{ p.valor }}</li>
+  {% empty %}
+    <li>Nenhum pagamento futuro.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
