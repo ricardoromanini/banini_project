@@ -1,2 +1,5 @@
-# Arquivo: wsgi.py
-# Substitua com seu conteúdo real.
+import os
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'banini_project.settings')
+application = get_wsgi_application()

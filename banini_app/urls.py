@@ -1,2 +1,1 @@
-# Arquivo: urls.py
-# Substitua com seu conteúdo real.
+# Arquivo de exemplo
