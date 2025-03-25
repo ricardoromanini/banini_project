@@ -1,2 +1,1 @@
-# Arquivo: Procfile
-# Substitua com seu conteúdo real.
+web: gunicorn banini_project.wsgi:application
