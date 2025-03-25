@@ -1,2 +1,1 @@
-# Arquivo: asgi.py
-# Substitua com seu conteúdo real.
+application = 'asgi app'

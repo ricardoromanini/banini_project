@@ -1,1 +1,1 @@
-# Arquivo de exemplo
+urlpatterns = []

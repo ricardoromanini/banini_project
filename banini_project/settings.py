@@ -1,1 +1,3 @@
-# Arquivo de exemplo
+SECRET_KEY = 'dummy'
+DEBUG=True
+ALLOWED_HOSTS = ['*']
