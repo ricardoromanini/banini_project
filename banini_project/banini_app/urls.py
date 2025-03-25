@@ -1,1 +1,1 @@
-# urls.py - conteúdo de exemplo
+# Simulated content for urls.py

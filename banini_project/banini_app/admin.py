@@ -1,1 +1,1 @@
-# admin.py - conteúdo de exemplo
+# Simulated content for admin.py

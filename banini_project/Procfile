@@ -1,0 +1,1 @@
+web: gunicorn banini_project.wsgi:application

@@ -1,13 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
+from django.http import HttpResponse
 
 def home(request):
-    hoje = datetime.now().date()
+    hoje = datetime.today()
     proximos_3_dias = hoje + timedelta(days=3)
-    return render(request, 'home.html', {'hoje': hoje, 'proximos_3_dias': proximos_3_dias})
+    return HttpResponse(f"Bem-vindo! Hoje é {hoje.strftime('%d/%m/%Y')}")
 
 def lista_pagamentos(request):
-    return render(request, 'lista_pagamentos.html')
+    return HttpResponse("Lista de pagamentos (em construção)")
 
 def baixa_pagamento(request, id):
-    return render(request, 'baixa_pagamento.html', {'id': id})
+    return HttpResponse(f"Baixa do pagamento ID {id} (em construção)")

@@ -1,57 +1,7 @@
-
 {% extends 'base.html' %}
 {% block content %}
 
 <h2>Cadastrar Pagamento</h2>
-
-<form method="post">
-  {% csrf_token %}
-  <div>
-    <label for="id_fornecedor">Fornecedor:</label>
-    {{ form.fornecedor }}
-    <button type="button" onclick="abrirModal()">+ Novo Fornecedor</button>
-  </div>
-  <div>
-    <label for="id_descricao">Descrição:</label>
-    {{ form.descricao }}
-  </div>
-  <div>
-    <label for="id_valor">Valor:</label>
-    {{ form.valor }}
-  </div>
-  <div>
-    <label for="id_data_vencimento">Data de Vencimento:</label>
-    {{ form.data_vencimento }}
-  </div>
-  <div>
-    <label for="id_forma_pagamento">Forma de Pagamento:</label>
-    {{ form.forma_pagamento }}
-  </div>
-
-  <button type="submit">Salvar</button>
-</form>
-
-<!-- Modal para cadastro rápido de fornecedor -->
-<div id="modalFornecedor" style="display:none; position:fixed; top:10%; left:30%; background:#fff; padding:20px; border:1px solid #ccc; box-shadow:0 0 10px #aaa;">
-  <h3>Novo Fornecedor</h3>
-  <form id="formFornecedor" method="post" action="{% url 'cadastrar_fornecedor' %}">
-    {% csrf_token %}
-    <label for="id_nome">Nome:</label><br>
-    <input type="text" name="nome" id="id_nome"><br><br>
-    <label for="id_cnpj">CNPJ:</label><br>
-    <input type="text" name="cnpj" id="id_cnpj"><br><br>
-    <button type="submit">Salvar</button>
-    <button type="button" onclick="fecharModal()">Cancelar</button>
-  </form>
-</div>
-
-<script>
-function abrirModal() {
-  document.getElementById('modalFornecedor').style.display = 'block';
-}
-function fecharModal() {
-  document.getElementById('modalFornecedor').style.display = 'none';
-}
-</script>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Salvar</button></form>
 
 {% endblock %}

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema BANINI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: #ff9900; padding: 15px 20px; color: white; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; }
+        nav ul li { display: inline; }
+        nav ul li a {
+            color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; background: #e68a00;
+            border-radius: 5px; transition: background 0.3s;
+        }
+        nav ul li a:hover { background: #cc7a00; }
+        main { padding: 20px; }
+        h1 { margin: 0 0 10px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍞 Sistema BANINI</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">🏠 Início</a></li>
+                <li><a href="{% url 'listar_fornecedores' %}">📋 Fornecedores</a></li>
+                <li><a href="{% url 'listar_pagamentos' %}">💰 Pagamentos</a></li>
+                <li><a href="{% url 'cadastrar_pagamento' %}">➕ Novo Pagamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
