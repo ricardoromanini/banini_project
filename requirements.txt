@@ -1,2 +1,2 @@
-Django>=5.0
-gunicorn==20.1.0
+# Arquivo: requirements.txt
+# Substitua com seu conteúdo real.

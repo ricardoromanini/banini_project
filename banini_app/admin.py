@@ -1,1 +1,2 @@
-# Simulated content for admin.py
+# Arquivo: admin.py
+# Substitua com seu conteúdo real.

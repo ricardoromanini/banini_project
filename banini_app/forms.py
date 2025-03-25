@@ -1,1 +1,2 @@
-# Simulated content for forms.py
+# Arquivo: forms.py
+# Substitua com seu conteúdo real.

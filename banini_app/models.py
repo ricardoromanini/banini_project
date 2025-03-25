@@ -1,1 +1,2 @@
-# Simulated content for models.py
+# Arquivo: models.py
+# Substitua com seu conteúdo real.

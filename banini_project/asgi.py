@@ -1,1 +1,2 @@
-# asgi.py - conteúdo de exemplo
+# Arquivo: asgi.py
+# Substitua com seu conteúdo real.

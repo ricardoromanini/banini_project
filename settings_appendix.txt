@@ -1,5 +1,0 @@
-
-# Adicionado para produção no Render
-import os
-
-ALLOWED_HOSTS = ['*']  # Ajuste conforme o domínio do Render

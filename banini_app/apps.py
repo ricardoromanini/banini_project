@@ -1,1 +1,2 @@
-# Simulated content for apps.py
+# Arquivo: apps.py
+# Substitua com seu conteúdo real.

@@ -1,2 +1,2 @@
-SECRET_KEY = 'fake-key'
-INSTALLED_APPS = ['banini_app']
+# Arquivo: settings.py
+# Substitua com seu conteúdo real.
